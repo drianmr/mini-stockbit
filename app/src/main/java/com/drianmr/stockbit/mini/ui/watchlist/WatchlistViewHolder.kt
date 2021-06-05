@@ -24,17 +24,14 @@ class WatchlistViewHolder(
                 0f
             }
 
-        val changeDayPercentage =
-            if (rawChangeDayPercentage > 0f) "+$rawChangeDayPercentage" else "$rawChangeDayPercentage"
-
         binding.textViewName.text = data.info.name
         binding.textViewFullName.text = data.info.fullName
-        binding.textViewPrice.text = formatPrice(rawPrice)
+        binding.textViewPrice.text = formatDecimal(rawPrice)
         binding.textViewChangeDay.text =
             resources.getString(
                 R.string.template_change_day,
-                formatPrice(rawChangeDay),
-                changeDayPercentage,
+                formatDecimal(rawChangeDay, withPlus = true),
+                formatDecimal(rawChangeDayPercentage, withPlus = true),
             )
 
         binding.textViewChangeDay.setTextColor(getColorCompat(
@@ -46,8 +43,13 @@ class WatchlistViewHolder(
         ))
     }
 
-    private fun formatPrice(price: Float): String {
+    private fun formatDecimal(price: Float, withPlus: Boolean = false): String {
         val value = DecimalFormat("#,###.#").format(price)
-        return if (price > 0f) "+$value" else value
+
+        if (withPlus) {
+            return if (price > 0f) "+$value" else value
+        }
+
+        return value
     }
 }
