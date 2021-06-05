@@ -37,4 +37,10 @@
         android:label="@string/toolbar_title_search"
         tools:layout="@layout/fragment_search" />
 
+    <fragment
+        android:id="@+id/menu_chat"
+        android:name="com.drianmr.stockbit.mini.ui.chat.ChatFragment"
+        android:label="@string/toolbar_title_chat"
+        tools:layout="@layout/fragment_chat" />
+
 </navigation>
