@@ -79,6 +79,8 @@ class WatchlistFragment : BaseUiFragment() {
 
     private fun showListSkeleton() {
         binding.recyclerViewWatchlist.loadSkeleton(R.layout.item_watchlist) {
+            shimmer(false)
+            color(R.color.divider)
             itemCount(15)
         }
     }
