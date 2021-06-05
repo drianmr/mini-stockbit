@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.drianmr.stockbit.mini">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".MiniStockbitApplication"
         android:allowBackup="false"
@@ -9,7 +11,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MiniStockbit">
+        android:theme="@style/Theme.MiniStockbit"
+        android:usesCleartextTraffic="true">
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
 
         <activity android:name=".ui.main.MainActivity">
             <intent-filter>
