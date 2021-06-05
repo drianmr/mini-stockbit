@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.drianmr.stockbit.mini.ui.login.LoginFragment"
-        android:label="fragment_login"
+        android:label="@string/toolbar_title_login"
         tools:layout="@layout/fragment_login" />
 
 </navigation>
