@@ -3,4 +3,6 @@
     <string name="or">Atau</string>
     <string name="action_sign_in_with_google">Masuk dengan Google</string>
     <string name="action_sign_in_with_facebook">Masuk dengan Facebook</string>
+    <string name="hint_username_or_email">Username atau Email</string>
+    <string name="hint_password">Password</string>
 </resources>

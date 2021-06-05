@@ -25,4 +25,12 @@
         <item name="android:letterSpacing" tools:ignore="NewApi">0</item>
     </style>
 
+    <style name="Widget.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="hintTextAppearance">@style/TextAppearance.Regular.Small</item>
+    </style>
+
+    <style name="Widget.TextInputEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textAppearance">@style/TextAppearance.Regular.Regular</item>
+    </style>
+
 </resources>
