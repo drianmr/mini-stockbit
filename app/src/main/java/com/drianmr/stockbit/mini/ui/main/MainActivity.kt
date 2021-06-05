@@ -8,7 +8,9 @@ import androidx.navigation.ui.setupWithNavController
 import com.drianmr.stockbit.mini.R
 import com.drianmr.stockbit.mini.databinding.ActivityMainBinding
 import com.drianmr.stockbit.mini.ext.findNavController
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
