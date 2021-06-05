@@ -15,4 +15,6 @@
     <string name="toolbar_title_search">Search</string>
     <string name="toolbar_title_chat">Chat</string>
     <string name="toolbar_title_portfolio">Portfolio</string>
+    <string name="action_all_watchlist">All Watchlist</string>
+    <string name="action_add_symbol">Add Symbol</string>
 </resources>

@@ -8,4 +8,6 @@
     <color name="blue_facebook">#4267B2</color>
     <color name="divider">#eeeeee</color>
     <color name="divider_text">#9e9e9e</color>
+    <color name="grey">#9e9e9e</color>
+    <color name="black_ripple">#33000000</color>
 </resources>
