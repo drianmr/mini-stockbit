@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Naming: TextAppearance.<font family>.<font size> -->
+
+    <style name="TextAppearance" />
+
+    <style name="TextAppearance.Light">
+        <item name="fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="TextAppearance.Light.Small">
+        <item name="android:textSize">@dimen/font_size_small</item>
+    </style>
+
+    <style name="TextAppearance.Light.Regular">
+        <item name="android:textSize">@dimen/font_size_regular</item>
+    </style>
+
+    <style name="TextAppearance.Regular">
+        <item name="fontFamily">sans-serif</item>
+    </style>
+
+    <style name="TextAppearance.Regular.Small">
+        <item name="android:textSize">@dimen/font_size_small</item>
+    </style>
+
+    <style name="TextAppearance.Regular.Regular">
+        <item name="android:textSize">@dimen/font_size_regular</item>
+    </style>
+
+    <style name="TextAppearance.Regular.Medium">
+        <item name="android:textSize">@dimen/font_size_medium</item>
+    </style>
+
+    <style name="TextAppearance.Medium">
+        <item name="fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextAppearance.Medium.Regular">
+        <item name="android:textSize">@dimen/font_size_regular</item>
+    </style>
+
+    <style name="TextAppearance.Medium.Medium">
+        <item name="android:textSize">@dimen/font_size_medium</item>
+    </style>
+
+    <style name="TextAppearance.Medium.Large">
+        <item name="android:textSize">@dimen/font_size_large</item>
+    </style>
+
+</resources>
