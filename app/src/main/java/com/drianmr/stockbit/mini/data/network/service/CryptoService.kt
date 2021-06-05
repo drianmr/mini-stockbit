@@ -7,5 +7,5 @@ import retrofit2.http.QueryMap
 interface CryptoService {
 
     @GET("top/totaltoptiervolfull")
-    fun listCrypto(@QueryMap params: Map<String, String>): BaseResponse
+    suspend fun listCrypto(@QueryMap params: Map<String, String>): BaseResponse
 }
