@@ -4,9 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
+import androidx.recyclerview.widget.DividerItemDecoration
 import com.drianmr.stockbit.mini.R
 import com.drianmr.stockbit.mini.databinding.FragmentWatchlistBinding
 import com.drianmr.stockbit.mini.ext.verticalLayoutManager
@@ -55,9 +57,19 @@ class WatchlistFragment : BaseUiFragment() {
     }
 
     private fun setupRecyclerView() {
+        val divider =
+            DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL).apply {
+                ContextCompat.getDrawable(requireContext(), R.drawable.divider_list_item)
+                    ?.let { dividerDrawable ->
+                        setDrawable(dividerDrawable)
+                    }
+            }
+
         binding.recyclerViewWatchlist.apply {
             layoutManager = verticalLayoutManager()
             adapter = watchlistAdapter
+
+            addItemDecoration(divider)
         }
 
         watchlistAdapter.addLoadStateListener { loadState ->
