@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.text.buildSpannedString
 import androidx.core.text.color
+import androidx.navigation.Navigation
 import com.drianmr.stockbit.mini.R
 import com.drianmr.stockbit.mini.databinding.FragmentLoginBinding
 import com.drianmr.stockbit.mini.ext.getColorCompat
@@ -29,6 +30,12 @@ class LoginFragment : BaseUiFragment() {
 
     private fun setup() {
         setupRegisterButton()
+
+        binding.buttonLogin.setOnClickListener(
+            Navigation.createNavigateOnClickListener(
+                LoginFragmentDirections.actionLoginFragmentToWatchlistFragment()
+            )
+        )
     }
 
     private fun setupRegisterButton() {
