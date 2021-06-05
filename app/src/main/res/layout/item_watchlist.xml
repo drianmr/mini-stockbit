@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    tools:ignore="HardcodedText">
+
+    <!-- NOTE -->
+    <!-- Suppress HardcodedText for skeleton view -->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="8dp"
+        tools:viewBindingIgnore="true" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="8dp"
+        tools:viewBindingIgnore="true" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp"
+        tools:viewBindingIgnore="true" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp"
+        tools:viewBindingIgnore="true" />
+
+    <TextView
+        android:id="@+id/text_view_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ETH"
+        android:textAppearance="@style/TextAppearance.Medium.Medium"
+        android:textColor="@color/black_text"
+        app:layout_constraintBottom_toTopOf="@id/text_view_full_name"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toTopOf="@id/guideline_top" />
+
+    <TextView
+        android:id="@+id/text_view_full_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Ethereum"
+        android:textAppearance="@style/TextAppearance.Regular.Small"
+        android:textColor="@color/grey"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
+        app:layout_constraintEnd_toStartOf="@id/text_view_change_day"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/text_view_name" />
+
+    <TextView
+        android:id="@+id/text_view_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="112,129"
+        android:textAppearance="@style/TextAppearance.Medium.Regular"
+        android:textColor="@color/black_text"
+        app:layout_constraintBottom_toTopOf="@id/text_view_change_day"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintTop_toTopOf="@id/guideline_top" />
+
+    <TextView
+        android:id="@+id/text_view_change_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-59,211 (-49,4%)"
+        android:textAppearance="@style/TextAppearance.Regular.Small"
+        android:textColor="@color/grey"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintTop_toBottomOf="@id/text_view_price" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
