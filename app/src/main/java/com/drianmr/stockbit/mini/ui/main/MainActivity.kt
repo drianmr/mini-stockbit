@@ -2,6 +2,7 @@ package com.drianmr.stockbit.mini.ui.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isGone
 import androidx.navigation.NavController
 import androidx.navigation.ui.setupWithNavController
 import com.drianmr.stockbit.mini.R
@@ -28,11 +29,26 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setup() {
+        setupNavController()
         setupToolbar()
+        setupBottomNavigationView()
+    }
+
+    private fun setupNavController() {
+        val bottomNavigationDestinationIds = intArrayOf(R.id.menu_watchlist)
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            binding.bottomNavigationView.isGone =
+                (destination.id !in bottomNavigationDestinationIds)
+        }
     }
 
     private fun setupToolbar() {
         binding.toolbar.setupWithNavController(navController)
         setSupportActionBar(binding.toolbar)
+    }
+
+    private fun setupBottomNavigationView() {
+        binding.bottomNavigationView.setupWithNavController(navController)
     }
 }

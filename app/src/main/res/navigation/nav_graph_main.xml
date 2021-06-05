@@ -3,24 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph_main"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/fragment_login">
 
     <fragment
-        android:id="@+id/loginFragment"
+        android:id="@+id/fragment_login"
         android:name="com.drianmr.stockbit.mini.ui.login.LoginFragment"
         android:label="@string/toolbar_title_login"
         tools:layout="@layout/fragment_login">
 
         <action
             android:id="@+id/action_loginFragment_to_watchlistFragment"
-            app:destination="@id/watchlistFragment"
-            app:popUpTo="@id/watchlistFragment"
+            app:destination="@id/menu_watchlist"
+            app:popUpTo="@id/menu_watchlist"
             app:popUpToInclusive="true" />
 
     </fragment>
 
     <fragment
-        android:id="@+id/watchlistFragment"
+        android:id="@+id/menu_watchlist"
         android:name="com.drianmr.stockbit.mini.ui.watchlist.WatchlistFragment"
         android:label="@string/toolbar_title_watchlist"
         tools:layout="@layout/fragment_watchlist" />

@@ -11,4 +11,8 @@
     <string name="action_dont_have_account">Belum punya akun? Daftar Sekarang</string>
     <string name="toolbar_title_login">Masuk</string>
     <string name="toolbar_title_watchlist">Watchlist</string>
+    <string name="toolbar_title_stream">Stream</string>
+    <string name="toolbar_title_search">Search</string>
+    <string name="toolbar_title_chat">Chat</string>
+    <string name="toolbar_title_portfolio">Portfolio</string>
 </resources>
