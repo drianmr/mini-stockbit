@@ -38,6 +38,10 @@
         <item name="android:textAppearance">@style/TextAppearance.Medium.Regular</item>
     </style>
 
+    <style name="Widget.Button.Text.Small" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textAppearance">@style/TextAppearance.Medium.Small</item>
+    </style>
+
     <style name="Widget.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
         <item name="hintTextAppearance">@style/TextAppearance.Regular.Small</item>
     </style>

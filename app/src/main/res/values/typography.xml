@@ -37,6 +37,10 @@
         <item name="fontFamily">sans-serif-medium</item>
     </style>
 
+    <style name="TextAppearance.Medium.Small">
+        <item name="android:textSize">@dimen/font_size_small</item>
+    </style>
+
     <style name="TextAppearance.Medium.Regular">
         <item name="android:textSize">@dimen/font_size_regular</item>
     </style>

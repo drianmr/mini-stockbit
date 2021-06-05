@@ -135,7 +135,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_forgot_password"
-        style="@style/Widget.Button.Text"
+        style="@style/Widget.Button.Text.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/action_forgot_password"
@@ -158,10 +158,22 @@
         style="@style/Widget.Button.Outlined.Brand"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="@string/action_login_with_fingerprint"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintTop_toBottomOf="@id/button_login"
         app:strokeColor="@color/brand" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_register"
+        style="@style/Widget.Button.Text.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/action_dont_have_account"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/button_login_with_fingerprint" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
