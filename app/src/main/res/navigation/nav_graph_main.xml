@@ -43,4 +43,10 @@
         android:label="@string/toolbar_title_chat"
         tools:layout="@layout/fragment_chat" />
 
+    <fragment
+        android:id="@+id/menu_portfolio"
+        android:name="com.drianmr.stockbit.mini.ui.portfolio.PortfolioFragment"
+        android:label="@string/toolbar_title_portfolio"
+        tools:layout="@layout/fragment_portfolio" />
+
 </navigation>
