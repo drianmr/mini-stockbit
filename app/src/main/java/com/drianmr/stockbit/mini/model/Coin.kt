@@ -7,5 +7,5 @@ data class Coin(
     val info: CoinInfo,
 
     @SerializedName("RAW")
-    val raw: CoinRaw,
+    val raw: CoinRaw?,
 )
