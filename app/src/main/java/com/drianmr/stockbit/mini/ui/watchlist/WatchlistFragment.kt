@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.core.view.isGone
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
@@ -46,6 +47,7 @@ class WatchlistFragment : BaseUiFragment() {
     private fun setup() {
         setupSwipeRefreshLayout()
         setupRecyclerView()
+        setupErrorLayout()
     }
 
     private fun setupSwipeRefreshLayout() {
@@ -78,6 +80,15 @@ class WatchlistFragment : BaseUiFragment() {
             } else {
                 hideListSkeleton()
             }
+
+            binding.recyclerViewWatchlist.isGone = loadState.source.refresh is LoadState.Error
+            binding.containerError.isGone = loadState.source.refresh !is LoadState.Error
+        }
+    }
+
+    private fun setupErrorLayout() {
+        binding.buttonRetry.setOnClickListener {
+            watchlistAdapter.refresh()
         }
     }
 

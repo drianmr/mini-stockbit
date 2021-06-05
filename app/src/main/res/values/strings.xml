@@ -17,4 +17,6 @@
     <string name="toolbar_title_portfolio">Portfolio</string>
     <string name="action_all_watchlist">All Watchlist</string>
     <string name="action_add_symbol">Add Symbol</string>
+    <string name="action_retry">Coba Lagi</string>
+    <string name="message_error_occurred">Terjadi Kesalahan</string>
 </resources>
