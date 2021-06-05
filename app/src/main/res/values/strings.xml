@@ -10,4 +10,5 @@
     <string name="action_login_with_fingerprint">Masuk dengan Fingerprint</string>
     <string name="action_dont_have_account">Belum punya akun? Daftar Sekarang</string>
     <string name="toolbar_title_login">Masuk</string>
+    <string name="toolbar_title_watchlist">Watchlist</string>
 </resources>
