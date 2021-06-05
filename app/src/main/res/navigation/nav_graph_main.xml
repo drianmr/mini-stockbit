@@ -31,4 +31,10 @@
         android:label="@string/toolbar_title_stream"
         tools:layout="@layout/fragment_stream" />
 
+    <fragment
+        android:id="@+id/menu_search"
+        android:name="com.drianmr.stockbit.mini.ui.search.SearchFragment"
+        android:label="@string/toolbar_title_search"
+        tools:layout="@layout/fragment_search" />
+
 </navigation>
