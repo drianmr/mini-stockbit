@@ -37,7 +37,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupNavController() {
-        val bottomNavigationDestinationIds = intArrayOf(R.id.menu_watchlist)
+        val bottomNavigationDestinationIds = intArrayOf(
+            R.id.menu_watchlist,
+            R.id.menu_stream,
+            R.id.menu_search,
+            R.id.menu_chat,
+            R.id.menu_portfolio,
+        )
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
             binding.bottomNavigationView.isGone =
