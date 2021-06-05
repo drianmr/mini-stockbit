@@ -6,10 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.paging.LoadState
+import com.drianmr.stockbit.mini.R
 import com.drianmr.stockbit.mini.databinding.FragmentWatchlistBinding
 import com.drianmr.stockbit.mini.ext.verticalLayoutManager
 import com.drianmr.stockbit.mini.ui.base.BaseUiFragment
 import dagger.hilt.android.AndroidEntryPoint
+import koleton.api.hideSkeleton
+import koleton.api.loadSkeleton
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -38,13 +42,30 @@ class WatchlistFragment : BaseUiFragment() {
     }
 
     private fun setup() {
+        setupSwipeRefreshLayout()
         setupRecyclerView()
+    }
+
+    private fun setupSwipeRefreshLayout() {
+        binding.swipeRefreshLayout.setOnRefreshListener {
+            binding.swipeRefreshLayout.isRefreshing = true
+            watchlistAdapter.refresh()
+            binding.swipeRefreshLayout.isRefreshing = false
+        }
     }
 
     private fun setupRecyclerView() {
         binding.recyclerViewWatchlist.apply {
             layoutManager = verticalLayoutManager()
             adapter = watchlistAdapter
+        }
+
+        watchlistAdapter.addLoadStateListener { loadState ->
+            if (loadState.source.refresh is LoadState.Loading) {
+                showListSkeleton()
+            } else {
+                hideListSkeleton()
+            }
         }
     }
 
@@ -54,5 +75,15 @@ class WatchlistFragment : BaseUiFragment() {
                 watchlistAdapter.submitData(pagingData)
             }
         }
+    }
+
+    private fun showListSkeleton() {
+        binding.recyclerViewWatchlist.loadSkeleton(R.layout.item_watchlist) {
+            itemCount(15)
+        }
+    }
+
+    private fun hideListSkeleton() {
+        binding.recyclerViewWatchlist.hideSkeleton()
     }
 }
