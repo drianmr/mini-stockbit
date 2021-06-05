@@ -19,4 +19,10 @@
 
     <style name="Theme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
 
+    <style name="Widget.Button.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/black_text</item>
+        <item name="android:letterSpacing" tools:ignore="NewApi">0</item>
+    </style>
+
 </resources>
