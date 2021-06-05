@@ -3,6 +3,7 @@ package com.drianmr.stockbit.mini.ui.watchlist
 import androidx.recyclerview.widget.RecyclerView
 import com.drianmr.stockbit.mini.R
 import com.drianmr.stockbit.mini.databinding.ItemWatchlistBinding
+import com.drianmr.stockbit.mini.ext.getColorCompat
 import com.drianmr.stockbit.mini.ext.resources
 import com.drianmr.stockbit.mini.model.Coin
 import java.text.DecimalFormat
@@ -35,6 +36,14 @@ class WatchlistViewHolder(
                 formatPrice(rawChangeDay),
                 changeDayPercentage,
             )
+
+        binding.textViewChangeDay.setTextColor(getColorCompat(
+            when {
+                rawChangeDay > 0f -> R.color.brand
+                rawChangeDay < 0f -> R.color.red
+                else -> R.color.grey
+            }
+        ))
     }
 
     private fun formatPrice(price: Float): String {
