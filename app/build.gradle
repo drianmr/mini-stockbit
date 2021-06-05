@@ -52,6 +52,11 @@ dependencies {
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
 
+    // ViewModel and LiveData
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycleVersion"
+
     // Navigation component
     implementation "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
     implementation "androidx.navigation:navigation-ui-ktx:$navigationVersion"
