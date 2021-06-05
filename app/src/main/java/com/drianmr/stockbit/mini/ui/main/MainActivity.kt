@@ -1,9 +1,10 @@
-package com.drianmr.stockbit.mini
+package com.drianmr.stockbit.mini.ui.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.ui.setupWithNavController
+import com.drianmr.stockbit.mini.R
 import com.drianmr.stockbit.mini.databinding.ActivityMainBinding
 import com.drianmr.stockbit.mini.ext.findNavController
 
